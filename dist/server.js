@@ -3,6 +3,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+const dotenv_1 = __importDefault(require("dotenv"));
 require("reflect-metadata");
 require("./config/env");
 require("express-async-errors");
@@ -36,6 +37,7 @@ app.use((err, request, response, _) => {
         .status(500)
         .json({ status: 'error', message: 'Internal server error' });
 });
+dotenv_1.default.config();
 app.listen(3000, () => {
     console.log('Server started on port 3000');
 });
