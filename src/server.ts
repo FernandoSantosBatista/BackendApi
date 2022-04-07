@@ -43,6 +43,6 @@ app.use((err: Error, request: Request, response: Response, _: NextFunction) => {
 
 dotenv.config();
 
-app.listen(3000, () => {
+app.listen(process.env.PORT || 3000, () => {
   console.log('Server started on port 3000');
 });
