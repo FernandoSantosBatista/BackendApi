@@ -1,10 +1,18 @@
 {
   "type": "postgres",
-  "host": "localhost",
+  "host": "ec2-52-203-118-49.compute-1.amazonaws.com",
   "port": 5432,
-  "username": "postgres",
-  "password": "123456",
-  "database": "dg_base",
+  "username": "jqqdejpyysprkm",
+  "password": "a3eb02869bc810c5a7b3e86b477fdac90309830f542f56f95dd900553eb10487",
+  "database": "d6le0055l1mm95",
+  "synchronize": false,
+  "extra": {
+    "ssl": {
+      "require": true,
+      "rejectUnauthorized": false
+    }
+  },
+
   "entities": [
     "./src/models/*.ts"
   ],

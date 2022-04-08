@@ -1,4 +1,5 @@
 import 'reflect-metadata';
+require('dotenv').config();
 import './config/env';
 import 'express-async-errors';
 import cors from 'cors';
@@ -40,6 +41,6 @@ app.use((err: Error, request: Request, response: Response, _: NextFunction) => {
     .json({ status: 'error', message: 'Internal server error' });
 });
 
-app.listen(3000, () => {
+app.listen(process.env.PORT || 3000, () => {
   console.log('Server started on port 3000');
 });
