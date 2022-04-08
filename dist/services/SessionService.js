@@ -35,7 +35,6 @@ class SessionService {
             const token = (0, jsonwebtoken_1.sign)({}, process.env.APP_SECRET, {
                 expiresIn: '1d',
             });
-            delete user.password;
             return {
                 token,
                 user,
