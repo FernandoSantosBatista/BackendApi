@@ -13,7 +13,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const typeorm_1 = require("typeorm");
-const Dogs_1 = __importDefault(require("src/models/Dogs"));
+const Dogs_1 = __importDefault(require("../models/Dogs"));
 class DogsRepository {
     constructor() {
         this.ormRepository = (0, typeorm_1.getRepository)(Dogs_1.default);

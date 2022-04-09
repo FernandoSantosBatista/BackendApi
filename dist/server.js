@@ -3,13 +3,11 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-require("reflect-metadata");
 require('dotenv').config();
-require("./config/env");
+require("reflect-metadata");
 require("express-async-errors");
 const cors_1 = __importDefault(require("cors"));
 const body_parser_1 = __importDefault(require("body-parser"));
-const path_1 = require("path");
 const express_1 = __importDefault(require("express"));
 require("./database");
 const routes_1 = __importDefault(require("./routes"));
@@ -24,7 +22,6 @@ app.use(body_parser_1.default.urlencoded({
     extended: true,
 }));
 app.use((0, cors_1.default)());
-app.use('/files', express_1.default.static((0, path_1.resolve)(__dirname, '..', 'uploads')));
 app.use(routes_1.default);
 app.use((err, request, response, _) => {
     if (err instanceof AppError_1.default) {

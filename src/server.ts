@@ -1,10 +1,8 @@
-import 'reflect-metadata';
 require('dotenv').config();
-import './config/env';
+import 'reflect-metadata';
 import 'express-async-errors';
 import cors from 'cors';
 import bodyParser from 'body-parser';
-import { resolve } from 'path';
 import express, { Request, Response, NextFunction } from 'express';
 import './database';
 import routes from './routes';
@@ -26,7 +24,6 @@ app.use(
   }),
 );
 app.use(cors());
-app.use('/files', express.static(resolve(__dirname, '..', 'uploads')));
 app.use(routes);
 
 app.use((err: Error, request: Request, response: Response, _: NextFunction) => {

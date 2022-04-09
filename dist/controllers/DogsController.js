@@ -12,13 +12,13 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const DogsRepository_1 = __importDefault(require("src/repositories/DogsRepository"));
-const CreateDogsService_1 = __importDefault(require("src/services/CreateDogsService"));
-const DeleteDogsService_1 = __importDefault(require("src/services/DeleteDogsService"));
-const ListAllDogsService_1 = __importDefault(require("src/services/ListAllDogsService"));
-const PaginatedDogsService_1 = __importDefault(require("src/services/PaginatedDogsService"));
-const ShowDogsService_1 = __importDefault(require("src/services/ShowDogsService"));
-const UpdateDogsService_1 = __importDefault(require("src/services/UpdateDogsService"));
+const DogsRepository_1 = __importDefault(require("../repositories/DogsRepository"));
+const CreateDogsService_1 = __importDefault(require("../services/CreateDogsService"));
+const DeleteDogsService_1 = __importDefault(require("../services/DeleteDogsService"));
+const ListAllDogsService_1 = __importDefault(require("../services/ListAllDogsService"));
+const PaginatedDogsService_1 = __importDefault(require("../services/PaginatedDogsService"));
+const ShowDogsService_1 = __importDefault(require("../services/ShowDogsService"));
+const UpdateDogsService_1 = __importDefault(require("../services/UpdateDogsService"));
 class DogsController {
     index(request, response) {
         return __awaiter(this, void 0, void 0, function* () {

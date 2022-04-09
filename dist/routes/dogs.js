@@ -4,7 +4,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = require("express");
-const DogsController_1 = __importDefault(require("src/controllers/DogsController"));
+const DogsController_1 = __importDefault(require("../controllers/DogsController"));
 const dogsRoutes = (0, express_1.Router)();
 const dogsController = new DogsController_1.default();
 dogsRoutes.get('/', dogsController.index);

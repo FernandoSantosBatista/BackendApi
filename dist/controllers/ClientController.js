@@ -17,7 +17,7 @@ const CreateClientService_1 = __importDefault(require("../services/CreateClientS
 const UpdateClientService_1 = __importDefault(require("../services/UpdateClientService"));
 const PaginatedClientsService_1 = __importDefault(require("../services/PaginatedClientsService"));
 const DeleteClientService_1 = __importDefault(require("../services/DeleteClientService"));
-const ShowClientsService_1 = __importDefault(require("src/services/ShowClientsService"));
+const ShowClientsService_1 = __importDefault(require("../services/ShowClientsService"));
 class ClientController {
     index(request, response) {
         return __awaiter(this, void 0, void 0, function* () {
